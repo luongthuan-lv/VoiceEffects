@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3300BCD4"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/imgAlien"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgDrunk"
+            app:layout_constraintEnd_toStartOf="@+id/imgDeath"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_alien" />
+
+        <ImageView
+            android:id="@+id/imgDeath"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgGhost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgAlien"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_death" />
+
+        <ImageView
+            android:id="@+id/imgDrunk"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgRobot"
+            app:layout_constraintEnd_toStartOf="@+id/imgGhost"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAlien"
+            app:srcCompat="@drawable/ic_drunk" />
+
+        <ImageView
+            android:id="@+id/imgGhost"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgZombie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgDrunk"
+            app:layout_constraintTop_toBottomOf="@+id/imgDeath"
+            app:srcCompat="@drawable/ic_ghost" />
+
+        <ImageView
+            android:id="@+id/imgRobot"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgZombie"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDrunk"
+            app:srcCompat="@drawable/ic_robot" />
+
+        <ImageView
+            android:id="@+id/imgZombie"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgRobot"
+            app:layout_constraintTop_toBottomOf="@+id/imgGhost"
+            app:srcCompat="@drawable/ic_zombie" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
